@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<stdint.h>
+#define nibble0  0
+#define nibble1  1
+#define nibble2  2
+#define nibble3  3
+#define nibble4  4
+#define nibble5  5
+#define nibble6  6
+#define nibble7  7
+
+uint8_t getnibble_position(uint8_t nibble_num)
+{
+uint8_t nibble_position=nibble_num*8;
+return nibble_position;
+}
+int32_t main(void)
+{
+uint8_t nbn=0;
+for(nbn=0;nbn<8;nbn++)
+{
+printf("\n nibble %d is positioned at %d",nbn,getnibble_position(nbn));
+}
